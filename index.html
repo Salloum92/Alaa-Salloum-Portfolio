@@ -21,12 +21,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="night">
     <!-- start Header -->
     <header>
         <div class="container">
             <a href=""><img src="" alt="">Alaa Salloum</a>
             <nav>
+                <div class="toggle">
+                    <img id="icon" class="icon sun" src="img/sun.png" alt="">
+                    <img src="img/moon.png" class="icon moon" alt="">
+                
+                </div>
                 <i class="fa-regular fa-chart-bar mobile-show"></i>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -71,15 +76,15 @@
             <div class="images">
                 <img src="img/alaa.jpg" alt="">
             </div>
-            <div class="social">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+            
         </div>
        
-        
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
         <a href="#education" class="go-down">
             <i class="fa-solid fa-angles-down"></i>
         </a>
@@ -89,10 +94,10 @@
     <div class="education" id="education">
         <h1 class="main-title">Education</h1>
         <div class="container">
-            <div class="image">
+            <div class="image hidden">
                 <img src="img/damascus.jpg" alt="">
             </div>
-            <div class="grade-one">
+            <div class="grade-one hidden">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <p class="one-title">
                     Architectural Engineering
@@ -102,7 +107,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima libero porro hic consequatur aliquid optio nihil
                 </p>
             </div>
-            <div class="grade-tow">
+            <div class="grade-tow hidden">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <p class="one-title">
                     High School
@@ -120,7 +125,7 @@
     <div class="services" id="services">
         <h1 class="main-title">Services</h1>
         <div class="container">
-            <div class="box">
+            <div class="box hidden">
                 <div class="i-info">
                     <i class="fa-solid fa-pen-ruler"></i>
                 </div>
@@ -130,7 +135,7 @@
                         veritatis placeat consecte</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box hidden">
                 <div class="i-info">
                     <i class="fa-solid fa-couch"></i>
                 </div>
@@ -140,7 +145,7 @@
                     veritatis placeat consecte</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box hidden">
                 <div class="i-info">
                     <i class="fa-solid fa-vihara"></i>
                 </div>
@@ -157,7 +162,7 @@
         <div class="my-skills" id="skills">
             <h1 class="main-title">Skills</h1>
             <div class="container">
-                <div class="box">
+                <div class="box hidden">
                     <h1>PROFESSIONAL</h1>
                     <div class="skills">
                         <div class="skill">
@@ -186,7 +191,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box hidden">
                     <h1>PERSONAL</h1>
                     <div class="skills">
                         <div class="skill">
@@ -215,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box hidden">
                     <h1>EXTRA</h1>
                     <div class="skills">
                         <div class="skill">
@@ -239,10 +244,10 @@
     <div class="about" id="about">
         <h1 class="main-title">About Me ! </h1>
         <div class="container">
-            <div class="box">
+            <div class="box hidden">
                 <img src="img/alaa.jpg" alt="">
             </div>
-            <div class="box1">
+            <div class="box1 hidden">
                 <p class="who">
                     More About Me ? 
                 </p>
@@ -274,7 +279,7 @@
     </div>
     <!-- End About me -->
     <!-- Start Footer -->
-    <div class="footer">
+    <div class="footer" id="contact">
         <div class="container">
             <div class="box">
                 <h3>Alaa Salloum</h3>
@@ -285,10 +290,6 @@
                     <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
                     <li><a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    
-                    
-                    
-                    
                 </ul>
             </div>
             <div class="box">
@@ -310,6 +311,24 @@
         <p class="copyright">Made With &lt;3 By Ahmad Salloum</p>
     </div>
     <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+    
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            var splide = new Splide('.splide', {
+                type: 'fade',
+                rewind: true,
+            });
+
+            splide.mount();
+        });
+    </script>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
